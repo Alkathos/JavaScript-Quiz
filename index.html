@@ -1,16 +1,50 @@
 <!doctype html>
-
-<html lang="en">
+<html>
 
 <head>
     <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets\css\style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+    <header>
+        <section>
+            <div class="timeandscorecontainer">
+                <div class="scorecontainer">
+                    <h2 id="highscores">View Highscores</h2>
+                </div>
+                <div class="timecontainer">
+                    <h2>Time remaining:</h2>
+                    <div id="timer">80</div>
+                </div>
+            </div>  
+        </section>     
+    </header>
+    <main>
+        <section>
+            <h1 class="titleheader">JavaScript Multiple Choice Quiz</h1>
+            <div id="questioncontainer">
+                The following quiz will ask you questions relating to JavaScript. Try to answer within the time limit given. The timer will begin when you click the Start Quiz button.
+                
+                
+            </div>
+        </section>
+        <section class="answersection">
+            <div>
+                <button id="start">Start Quiz</button>
+            </div>
+        </section>
+        
+    </main>
 
 
 </body>
-
+    <script type="text/javascript" src="assets\js\script.js"></script>
 </html>
+
+
+<!--<button id="answer1" class="answerselection"> 1. answer</button>
+<button id="answer2" class="answerselection"> 2. answer</button>
+<button id="answer3" class="answerselection"> 3. answer</button>
+<button id="answer4" class="answerselection"> 4. answer</button>-->
