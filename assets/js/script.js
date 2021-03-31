@@ -1,3 +1,9 @@
+//variables to access the containers where the questions and answer buttons will appear
+var quizContainer = document.getElementById("questioncontainer");
+var answerContainer = document.getElementById("answersection");
+var startButton = document.getElementById("start-btn")
+var instruction = document.getElementById("begininginstruction")
+
 // this keeps track of the timer
 var timer;
 //this keeps track of the the current time that we are going though
@@ -25,8 +31,7 @@ var jsQuestions = [ {
         }
     ];
 
-//this variable will hold a random question that the user will have to answer
-var questions    
+  
 //this functions tells the browser what happens when the timer reaches 0
 function quizOver () {
     
@@ -49,13 +54,30 @@ function startTimer () {
     }, 1000);
 }
 
+function renderQuestion(question) {
+
+}
+
 //function to begin the game which references the startTimer function.
 function startQuiz() {
-    questions=jsQuestions[Math.floor(Math.random()*jsQuestions.length)];
-    document.createElement("button");
-
     startTimer();
+    renderQuestion();
+    startButton.style.display = "none";
+    instruction.style.display = "none";
+    quizContainer.classList.remove("hide");
+    answerContainer.style.display = enabled;
 }
 
 //When I click the button that has the "start" id associated with it, it will wait for a click and begin the countdown.
-document.getElementById("start").addEventListener("click", startQuiz);
+document.getElementById("start-btn").addEventListener("click", startQuiz);
+
+
+
+/*
+    ----Pseudo to display quiz question----
+    1. when the start quiz button is pressed start timer[c]
+    2. questions should be shown in the quiz container
+        a. maybe "push" objects to div container
+    3. buttons should appear with corresponding answers inside them
+        a. create buttons, target innerHTML and append child to the answersection div
+*/

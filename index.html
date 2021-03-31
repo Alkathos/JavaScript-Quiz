@@ -24,15 +24,25 @@
     <main>
         <section>
             <h1 class="titleheader">JavaScript Multiple Choice Quiz</h1>
-            <div id="questioncontainer">
-                The following quiz will ask you questions relating to JavaScript. Try to answer within the time limit given. The timer will begin when you click the Start Quiz button.
-                
-                
+            <div class="centercontainer">
+                <div id="begininginstruction">The following quiz will ask you questions relating to JavaScript. Try to answer within the time limit given. The timer will begin when you click the Start Quiz button.</div>
+            </div>  
+        </section>
+        <section>
+            <div id="questioncontainer" class="hide">
+                <div id="question">Question</div>    
             </div>
         </section>
-        <section class="answersection">
-            <div>
-                <button id="start">Start Quiz</button>
+        <div class="centercontainer">
+            <button id="start-btn">Start Quiz</button>
+        </div>
+        
+        <section>
+            <div class="answersection">
+                <button class="answerbtns"> 1. answer</button>
+                <button class="answerbtns"> 2. answer</button>
+                <button class="answerbtns"> 3. answer</button>
+                <button class="answerbtns"> 4. answer</button>
             </div>
         </section>
         
@@ -44,7 +54,4 @@
 </html>
 
 
-<!--<button id="answer1" class="answerselection"> 1. answer</button>
-<button id="answer2" class="answerselection"> 2. answer</button>
-<button id="answer3" class="answerselection"> 3. answer</button>
-<button id="answer4" class="answerselection"> 4. answer</button>-->
+
