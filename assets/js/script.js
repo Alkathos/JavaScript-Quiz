@@ -1,35 +1,23 @@
-//variables to access the containers where the questions and answer buttons will appear
+//variables for our DOM elements
 var quizContainer = document.getElementById("questioncontainer");
 var answerContainer = document.getElementById("answersection");
-var startButton = document.getElementById("start-btn")
-var instruction = document.getElementById("begininginstruction")
+var startButton = document.getElementById("start-btn");
+var instruction = document.getElementById("begininginstruction");
+var questionElement = document.getElementById("question");
+var answerButtonsElement = document.getElementById("answergrid");
 
-// this keeps track of the timer
+/*----------global variables---------*/
+var currentQuestionIndex;
 var timer;
-//this keeps track of the the current time that we are going though
 var count;
-//array for the questiosn that will be asked along with a correct answer
+
+/*----------questions---------*/
 var jsQuestions = [ {
-    question: "What type value is true and false?",
-    answers: {
-        1: "String",
-        2: "Operators",
-        3: "Function",
-        4: "Boolean"
-        },
-        correctAnswer: "4"
-    },
-        {
-            question: "Which of the following gives your code functionality?",
-            answers: {
-                1: "String",
-                2: "Operators",
-                3: "Function",
-                4: "Boolean"
-            },
-        correctAnswer: "3"
-        }
-    ];
+    question: "What data type is true and false?",
+    choices: ["Boolean", "Variable", "Operator", "String"],
+    answer: "Boolean"
+}];
+
 
   
 //this functions tells the browser what happens when the timer reaches 0
@@ -54,30 +42,24 @@ function startTimer () {
     }, 1000);
 }
 
-function renderQuestion(question) {
+function showNextQuestion(question) {
+   
+}
 
+function renderQuestion(question) {
+    questionElement.innerText = jsQuestions.question;
 }
 
 //function to begin the game which references the startTimer function.
 function startQuiz() {
     startTimer();
-    renderQuestion();
     startButton.style.display = "none";
     instruction.style.display = "none";
     quizContainer.classList.remove("hide");
-    answerContainer.style.display = enabled;
+    currentQuestionIndex = 0;
+    answerContainer.classList.remove("hide");
+    renderQuestion();
 }
 
 //When I click the button that has the "start" id associated with it, it will wait for a click and begin the countdown.
 document.getElementById("start-btn").addEventListener("click", startQuiz);
-
-
-
-/*
-    ----Pseudo to display quiz question----
-    1. when the start quiz button is pressed start timer[c]
-    2. questions should be shown in the quiz container
-        a. maybe "push" objects to div container
-    3. buttons should appear with corresponding answers inside them
-        a. create buttons, target innerHTML and append child to the answersection div
-*/
