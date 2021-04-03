@@ -1,6 +1,6 @@
 .titleheader {
     text-align: center;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 #questioncontainer {
@@ -88,4 +88,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.choice{
+    display: block;
+    margin-top: 10px;
 }
